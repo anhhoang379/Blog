@@ -1,6 +1,6 @@
 export function discussionGql(ghDiscussionCategoryId: string | undefined) {
   return `{
-          repository(owner: "anhhoang379", name: "Bog-note") {
+          repository(owner: "anhhoang379", name: "Blog") {
               discussions(first: 100, categoryId: "${ghDiscussionCategoryId}") {
                 nodes {
                   title
@@ -29,7 +29,7 @@ export function discussionGql(ghDiscussionCategoryId: string | undefined) {
 // Single post
 export function discussionDetailGql(postId: number | undefined) {
   return `{
-      repository(owner: "anhhoang379", name: "Bog-note") {
+      repository(owner: "anhhoang379", name: "Blog") {
         discussion(number: ${postId}) {
           title
           bodyHTML
